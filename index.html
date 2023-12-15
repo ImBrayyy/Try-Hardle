@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no, shrink-to-fit=no" />
+  <meta name="HandheldFriendly" content="true">
+	<title>Try-Hardle</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" type="image/png" href="favicon.png" />
+
+</head>
+
+<body>
+	<!--
+	<label class="switch">
+	  <input type="checkbox">
+	  <span class="slider round"></span>
+	</label>
+	
+	-->
+	<div class="popup" id="instructionPopup">
+		<div class='overlay'></div>
+		<div class="content">
+			<div class='close-btn' onclick="togglePopupInstructions()">X</div>
+			<h1 class="instructionsText">Try-Hardle</h1>
+			<p class="instructionsText">Welcome to Try-Hardle, a game based off of the popular New York Times "Wordle".</p>
+			<p class="instructionsText">You have a certain amount of tries to guess the hidden word.(4-6 characters in length)</p>
+			<p class="instructionsText">In this addtion, the words you recieve are increasingly harder and more obscure.</p>
+			<p class="instructionText">To make it more difficult, the color scheme is random, leaving you, the player, to figure out what each random color represents.</p>
+			<p class="instructionsText">It should also be noted that if there is only one occurence of a letter, but you guess more than one, all of them will show, leaving it to be deceptive. (look at example if needed)</p>
+			<h1>For Example: </h1>
+			<img src="steal.png" class="image-resize">
+			<p>The user is unsure if the 'A' is in the correct spot due to the random color, but they do know that it has a place in the word.</p>
+			<img src="every.png" class="image-resize">
+			<p>Although every occurence of the letter 'E' is highlighted, there may still only be one 'E' in the puzzle. On the other hand however, there may be more</p>
+			<p>Final warning: I can not guarentee that the words will be completely appropriate all the time and may not always supply the player with the proper and most relevant definition at the end. Play at your own risk. </p>
+		</div>	
+	</div>
+	<div id= 'navbar'>
+		<h1 id='gameTitle' class='navElement'>Try-Hardle</h1>
+		<button onclick = "togglePopupInstructions()" id="instructionsButton" class='navElement'><img src='questionMark.png' height='20' width='20'/></button>
+	</div>
+		<div class="popup2" id="youWinPopup">
+		<div class='overlay'></div>
+		<div class="content">
+			<div class='close-btn2' onclick="toggleYouWin()">X</div>
+			<h1 class="instructionsText">You win!</h1>
+			<p id="definition">definition goes here. if you see this, my code is broken. :/</p>
+			<p id="exampleSentence">example goes here. if you see this, my code is broken. :/</p>
+		</div>	
+	</div>
+	
+	<div class="hr"></div>
+	<br>
+	<div id="game">
+		<div class="grid">
+			<!--
+			<div class="box right">S</div>
+			<div class="box wrong">T</div>
+			<div class="box wrong ">E</div>
+			<div class="box wrong ">A</div>
+			<div class="box wrong">L</div>
+			-->
+		</div>
+	</div>
+	<div class='game-keyboard'>
+		<div class='keyboard-row'>
+			<button class='keyboard-button' id='q' onclick="buttonClick('q')">Q</button>
+			<button class='keyboard-button' id='w' onclick="buttonClick('w')">W</button>
+			<button class='keyboard-button' id='e' onclick="buttonClick('e')">E</button>
+			<button class='keyboard-button' id='r' onclick="buttonClick('r')">R</button>
+			<button class='keyboard-button' id='t' onclick="buttonClick('t')">T</button>
+			<button class='keyboard-button' id='y' onclick="buttonClick('y')">Y</button>
+			<button class='keyboard-button' id='u' onclick="buttonClick('u')">U</button>
+			<button class='keyboard-button' id='i' onclick="buttonClick('i')">I</button>
+			<button class='keyboard-button' id='o' onclick="buttonClick('o')">O</button>
+			<button class='keyboard-button' id='p' onclick="buttonClick('p')">P</button>
+		</div>
+		<div class='keyboard-row'>
+			<button class='keyboard-button' id='a' onclick="buttonClick('a')">A</button>
+			<button class='keyboard-button' id='s' onclick="buttonClick('s')">S</button>
+			<button class='keyboard-button' id='d' onclick="buttonClick('d')">D</button>
+			<button class='keyboard-button' id='f' onclick="buttonClick('f')">F</button>
+			<button class='keyboard-button' id='g' onclick="buttonClick('g')">G</button>
+			<button class='keyboard-button' id='h' onclick="buttonClick('h')">H</button>
+			<button class='keyboard-button' id='j' onclick="buttonClick('j')">J</button>
+			<button class='keyboard-button' id='k' onclick="buttonClick('k')">K</button>
+			<button class='keyboard-button' id='l' onclick="buttonClick('l')">L</button>
+		</div>
+		<div class='keyboard-row'>
+			<button class='keyboard-button' id='backspace' onclick="buttonClick('⌫')">⌫</button>
+			<button class='keyboard-button' id='z' onclick="buttonClick('z')">Z</button>
+			<button class='keyboard-button' id='x' onclick="buttonClick('x')">X</button>
+			<button class='keyboard-button' id='c' onclick="buttonClick('c')">C</button>
+			<button class='keyboard-button' id='v' onclick="buttonClick('v')">V</button>
+			<button class='keyboard-button' id='b' onclick="buttonClick('b')">B</button>
+			<button class='keyboard-button' id='n' onclick="buttonClick('n')">N</button>
+			<button class='keyboard-button' id='m' onclick="buttonClick('m')">M</button>
+			<button class='keyboard-button' id='enter' onclick="buttonClick('⏎')">⏎</button>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"></script>
+	<script src="script.js"></script>
+</body>
+
+</html>

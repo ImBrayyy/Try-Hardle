@@ -1,0 +1,305 @@
+html,
+body {
+	background: var(--default);
+	touch-action: pan-x pan-y;
+}
+
+:root {
+	--default: #121213;
+	--empty: #3a3a3c;
+	--wrong: #b59f3b;
+	--right: #538d4e;
+	--appears: #000080;
+	--keyboardEmpty: #373737;
+	
+	
+	--wordLength: 5;
+	--guesses: 6;
+	--boxWidth: 60px;
+}
+#gameTitle {
+	color: white;
+	display:grid;
+	place-items:center;
+	font-size: 48px;
+	font-family: Copperplate; 
+	padding: 0;
+	margin: 0;
+}
+#game {
+	display: grid;
+	place-items: center; 
+	align-content: center;
+	width: 100%;
+	height: 100%;
+}
+
+.grid {
+	display: grid;
+	grid-template-rows: repeat(var(--guesses),auto);
+	grid-template-columns: repeat(var(--wordLength), auto);
+}
+
+.box {
+	width: var(--boxWidth);
+	height: var(--boxWidth);
+	border: 2px solid var(--empty);
+	margin: 4px;
+	color: white;
+	text-transform: uppercase;
+	display: grid;
+	place-items: center;
+	font-family:  Copperplate;
+	font-size: 2.4rem;
+}
+
+.box.empty {
+	background: var(--empty);
+}
+.box.wrong {
+	background: var(--wrong);
+}
+
+.box.right {
+	background: var(--right);
+}
+
+.animated {
+	animation: flip 0.5s ease; 
+}
+
+@keyframes flip {
+	0% {
+		transform: scaleY(1);
+	}
+	50% {
+		transform: scaleY(0);
+	}
+	1000% {
+		transform: scaleY(1);
+	}
+}
+
+.hr { 
+	display: block; 
+	width: 50%;
+	align-items: center;
+	align: center;
+	overflow: hidden; 
+	border-style: inset; 
+	border-width: 1px;
+	background: white;
+	margin: 0 auto;
+}
+
+
+
+
+
+/* INSTRUCTIONS POPUP */
+.popup .overlay {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100vh;
+	height: 100vh;
+	background: rgba(0,0,0,0.7);
+	z-index: 1;
+	display: none;
+}
+
+.popup .content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) scale(0);
+	background: #E1D9D1;
+	width: 90%;
+	height: 80%px;
+	z-index: 2;
+	text-align: center;
+	padding: 20px;
+	box-sizing: border-box;
+	transition: all 300ms ease-out;
+	border-radius: 25px
+
+}
+
+.popup .close-btn {
+	cursor: pointer;
+	position: absolute;
+	/*Center  */
+	text-align: center;
+	/* center */
+	right: 40px;
+	top: 40px;
+	width: 30px;
+	height: 30px;
+	background: #222;
+	color: #fff;
+	font-size: 25px;
+	font-weight: 600;
+	line-height: 30px;
+	border-radius: 50%;
+}
+
+
+.popup.active .overlay {
+	display: none;
+}
+
+.popup.active .content {
+	transition: all 300ms ease-in-out;
+	transform: translate(-50%,-50%) scale(1);
+}
+
+/* YOU WIN POPUP */
+.popup2 .overlay {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100vh;
+	height: 100vh;
+	background: rgba(0,0,0,0.7);
+	z-index: 1;
+	display: none;
+}
+
+.popup2 .content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) scale(0);
+	background: #E1D9D1;
+	width: 60%;
+	height: 60%px;
+	z-index: 2;
+	text-align: center;
+	padding: 20px;
+	box-sizing: border-box;
+	transition: all 300ms ease-out;
+	border-radius: 25px
+
+}
+
+.popup2.active .overlay {
+	display: none;
+}
+
+.popup2.active .content {
+	transition: all 300ms ease-in-out;
+	transform: translate(-50%,-50%) scale(1);
+}
+
+.popup2 .close-btn2 {
+	cursor: pointer;
+	position: absolute;
+	/*Center  */
+	text-align: center;
+	/* center */
+	right: 20px;
+	top: 20px;
+	width: 30px;
+	height: 30px;
+	background: #222;
+	color: #fff;
+	font-size: 25px;
+	font-weight: 600;
+	line-height: 30px;
+	border-radius: 50%;
+}
+
+
+
+.instructionsText {
+	font-famiy: Rockwell;
+}
+
+
+
+.image-resize {
+	width: 50%;
+}
+
+/* Effects the instructions tab*/
+.popup p{
+	font-family: Rockwell;
+}
+.popup h1{
+	font-family: Rockwell;
+}
+.popup2 p{
+	font-family: Rockwell;
+}
+.popup2 h1{
+	font-family: Rockwell;
+}
+
+
+
+
+/*. NAVBAR   */
+
+#navbar {
+	display: grid;
+	justify-content: center;
+	align-items:center;
+}
+
+
+#instructionsButton {
+	background: transparent;
+	background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  outline: none;
+	position: relative;
+	align-items: center;
+}
+
+
+
+
+/*. GAME KEYBOARD   */
+
+.game-keyboard {
+	display: grid;
+	justify-content: center;
+	width: 100%;
+}
+
+.keyboard-row {
+    display: flex;
+    flex-direction: row;
+		text-align: center;
+    justify-content:stretch;
+}
+
+.keyboard-button {
+    align-items: center;
+    background-color: #808080;
+    border: 2px solid transparent;
+    border-radius: 4px;
+		color: #fff;
+		width: 35px;
+		height: 50px;
+		border-color: #000;
+    cursor: pointer;
+    display: flex;
+    flex: 1 1;
+    font-family: inherit;
+    font-size: 20px;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    text-transform:capitalize
+}
+
+
+.keyboard-button.empty {
+	background: var(--keyboardEmpty);
+}
+.keyboard-button.wrong {
+	background: var(--appears);
+}
+
