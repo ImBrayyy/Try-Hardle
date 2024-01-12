@@ -397,20 +397,6 @@ function changeWord(userWord){
 
 
 
-/*
-==========================================================================================
-IMPORTANT NOTICE
-ANY DISTRIBUTION OF THE WORK PUT INTO TRY-HARDLE WITHOUT PROPERLY ATTRIBUTING CREDIT IS UNDER NO CIRCUMSTANCES ALLOWED, AND IN DOING SO IS NOT GOOD >:(
-THIS TOOK MANY WEEKS TO CREATE AND IN ORDER TO USE THIS CODE YOU MUST GIVE ME, BRAYDEN P. MORRISON, PROPER CREDIT. (please :D )
-all videos or forms of entertainment that feature this game do not require giving me credit unless asked by a person or myself. 
-In all seriousness, I am lenient with things, but please dont just steal this code or claim the game to be your own. I put lots of work into this and want to at least be somewhat appreciated.
-==========================================================================================
-*/
-
-
-
-
-
 
 
 
