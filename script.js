@@ -34,8 +34,8 @@ const answerArr = words.filter(word => word.length === 13);
 */
 
 //const word = answerWords[Math.floor(Math.random()*answerWords.length)];
-// let word = answerArr[Math.floor(Math.random()*answerArr.length)] //atob('Y29kZXg=') 
-let word = 'cupid'
+let word = answerArr[Math.floor(Math.random()*answerArr.length)] //atob('Y29kZXg=') 
+
 
 let wordLength = word.length
 let guesses;
